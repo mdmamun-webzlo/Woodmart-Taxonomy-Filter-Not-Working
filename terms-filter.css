@@ -1,0 +1,29 @@
+## Here is Solution for woodmart with Customn ACF Taxonomy
+
+##Woodmart Sidebar Filter with Custom taxonomy Step by Step Solution
+
+https://elementorinsights.com/woodmart-filter-not-working-with-acf-custom-taxonomy/
+
+You can also read the article ACF Filter: https://wpbugfixing.com/woodmart-clear-out-now-not-operating/
+
+//Add this css at Advance CSS or Woodmart > Theme Setting > Custom CSS > Global CSS
+
+.wpc-filters-section {
+    margin-bottom: 0 !important;
+    position: relative;
+}
+.wpc-filters-widget-wrapper .wpc-instead-of-posts-found {
+    display: none !important;
+}
+
+.wpc-filters-widget-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.wpc-filters-widget-wrapper > .wpc-filters-section:nth-child(n+2):nth-child(-n+4) {
+    width: 100%; 
+}
+.wpc-filters-widget-wrapper > .wpc-filters-section:nth-child(n+5) {
+    grid-column: span 3;
+}
